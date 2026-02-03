@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <title></title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional config (good practice) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#362118',
+            secondary: '#f7f3eb',
+            darkbg:'#362118',
+          },
+          boxShadow: {
+            shadowcolor: '0px 0px 10px rgba(92,55,41,0.5)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+   
+    header.scrolled .nav-wrap{
+        margin-top:0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    @media only screen and (max-width: 993px){
+        header{
+            background-color: #f6f3eb;
+        }
+        nav {
+            position: absolute;
+            background: #5b3729;
+            color: #fff;
+            left: 0;
+            right: 0;
+            top: 51px;
+            padding: 10px 0 10px;
+            height:100vh;
+        }
+    }
+ </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="topHeader">
+        <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4 py-3 lg:py-0 lg:bg-primary lg:text-white lg:mt-3 lg:rounded-lg nav-wrapper shadow nav-wrap transition-all duration-300">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="text-xl font-bold">
+                    Anu
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="lg:flex lg:space-x-4 lg:ms-auto" id="navbar">
+                    <a href="#heroSection" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">home</i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#aboutMe" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">waving_hand</i>
+                        <span>About</span>
+                    </a>
+                    <a href="#mySkills" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">psychology_alt</i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#workExperience" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">work_history</i>
+                        <span>Experience</span>
+                    </a>
+                    <a href="#projectOverview" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">computer</i>
+                        <span>Project</span>
+                    </a>
+                    <a href="#contact" class="flex items-center gap-3 lg:gap-0 nav_link py-3 px-4 px-4 lg:px-0">
+                        <i class="material-icons block lg:hidden">call</i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+                <div class="flex items-center gap-4 ms-auto me-3 lg:me-0">
+                    <a href="https://wa.me/7356002488" target="_blank">
+                        <img src="images/whatsapp.png" class="max-w-[23px]">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anu-moly-poulose-aa2014140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <img src="images/linkedin.png" class="max-w-[23px]">
+                    </a>
+                </div>
+                <!-- Mobile Button -->
+                <button class="lg:hidden text-xl font-bold" id="menuBtn">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+    <main id="main-content" class="bg-secondary">
+
+        <!-- Hero Section -->
+        <section class="relative bg-white/300 lg:h-screen pt-7 lg:pt-0 flex items-center bg-secondary" id="heroSection">
+            <img src="images/bg-img.jpg" class="absolute w-full h-full inset-0 object-cover opacity-[0.1]">
+
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4 py-16 relative">
+                <div class="lg:flex items-center gap-10 w-full">
+                    <div>
+                        <h1 class="text-3xl lg:text-5xl font-extrabold mb-4 font-[Space Grotesk] text-primary">
+                            Anu Moly Poulose
+                        </h1>
+                        <h2 class="font-semibold mb-3 text-xl lg:text-2xl">
+                          <strong>UI Developer</strong>
+                        </h2>
+                        <h2 class="font-semibold mb-3 text-lg lg:text-xl">
+                            Crafting accessible, scalable web interfaces
+                        </h2>
+                        <h3 class="font-bold mb-8 text-md lg:text-xl">6+ years experience</h3>
+                        <a href="mailto:anumappanikkattu@gmail.com" class="flex items-center gap-3 font-semibold mb-4">
+                            <i class="material-icons">mail</i>
+                            <span>anumappanikkattu@gmail.com</span>
+                        </a>
+                        <a href="tel:7356002488" class="flex items-center gap-3 font-semibold mb-4">
+                            <i class="material-icons">phone</i>
+                            <span>7356002488</span>
+                        </a>
+                        <div class="flex items-center gap-3">
+                            <a href="" download class="inline-block bg-primary rounded-sm text-white px-3 py-2 uppercase text-[13px] tracking-wider uppercase font-semibold">Download Resume</a>
+                            <a href="#projectOverview" class="border border-primary rounded-sm px-3 py-2 bg-white uppercase text-[13px] tracking-wider uppercase font-semibold">Project Overview</a>
+                        </div>
+                    </div>
+                    <div class="lg:ms-auto hidden lg:block">
+                        <img src="images/design-girl.png" class="lg:max-w-[300px xl:max-w-[400px] border border-[#5b3729] rounded-full" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section class="py-10 lg:py-16 bg-white" id="aboutMe">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    About Me
+                </h2>
+                <p class="mb-6 leading-7 text-justify">
+                    I am a Web UI Developer with over 6 years of experience across project-based and product-based companies, specializing in converting UX designs into clean, responsive, and accessible web interfaces.
+                </p>
+                <p class="mb-6 leading-7 text-justify">
+                    have hands-on experience building enterprise dashboards, internal tools, and reporting layouts using HTML, CSS, JavaScript, ASP.NET, Telerik Reporting, and Angular. Currently, I am actively strengthening my React skills to build modern, component-based user interfaces while following WCAG accessibility standards.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="py-10 lg:py-16" id="mySkills">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Skills
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/html-5.png" class="max-h-[60px] mb-3" alt="html-5">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">HTML</h3>
+                            <p>
+                                Writing semantic, accessible HTML to build well-structured and SEO-friendly interfaces.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/css.png" class="max-h-[60px] mb-3" alt="CSS">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">CSS</h3>
+                            <p>
+                                Creating responsive, maintainable layouts with modern CSS, focusing on clean design and usability
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/JavaScript-Logo.png" class="max-h-[60px] mb-3" alt="Javascript">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Javascript</h3>
+                            <p>
+                                Building interactive, dynamic user interfaces with clean, maintainable JavaScript logic.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/bootstrap.png" class="max-h-[60px] mb-3" alt="Bootstrap">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Bootstrap (3,4,5)</h3>
+                            <p>
+                                Building responsive UI components quickly using Bootstrap’s grid system and reusable utilities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/tailwind.png" class="max-h-[60px] mb-3" alt="Tailwind">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Tailwind</h3>
+                            <p>
+                                Styling modern, responsive interfaces efficiently using utility-first Tailwind CSS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0]">
+                        <img src="images/React-icon.png" class="max-h-[60px] mb-3" alt="React">
+                        <div> 
+                            <h3 class="font-bold text-lg mb-2">React</h3>
+                            <p>
+                                Learning React with a focus on component-based UI development
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Known Tools -->
+        <section class="py-10 lg:py-16 bg-white" id="toolsKnown">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Tools
+                </h2>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-8 text-center">
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/git.png" class="w-[60px] m-auto" alt="git">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Git</h3>
+                    </div>
+
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/subversion.png" class="w-[60px] m-auto" alt="Subversion">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Subversion</h3>
+                    </div>
+
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/vscode.jpg" class="w-[60px] m-auto" alt="VS Code">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">VS Code</h3>
+                    </div>
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/Visual_Studio.png" class="w-[60px] m-auto" alt="VS Code">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Visual Studio</h3>
+                    </div>
+
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/target-process.png" class="w-[60px] m-auto" alt="Target Process">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Target Process</h3>
+                    </div>
+
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/xd.png" class="w-[60px] m-auto" alt="Adobe XD">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Adobe XD</h3>
+                    </div>
+
+                    <div class="rounded-lg shadow border border-[#e2d8c0] flex flex-col justify-center hover:shadow-shadowcolor">
+                        <div class="p-6">
+                            <img src="images/figma.jpg" class="w-[60px] m-auto" alt="Figma">
+                        </div>
+                        <h3 class="font-semibold text-lg p-2 bg-secondary mt-auto rounded-b-lg">Figma</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WCAG -->
+        <section class="py-10 lg:py-16" id="webAccessibility">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4 ">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-1 font-[Space Grotesk]">
+                    WCAG Accessibility
+                </h2>
+                <h3 class="mb-8 lg:mb-10 font-semibold text-center">WCAG 2.1 AA / WCAG 2.2 awareness</h3>
+                <p class="mb-8 font-semibold leading-7 text-justify">
+                    Experience in designing and developing accessible user interfaces that support assistive technologies, keyboard navigation, and inclusive user experiences in compliance with WCAG guidelines.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/typing.png" class="max-w-[100%] rounded-t-md" alt="Typing">
+                        <div class="p-3 text-center">
+                            Built keyboard-accessible interfaces with proper focus states, tab order, and ARIA roles to support users with mobility impairments
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/listening.png" class="max-w-[100%] rounded-t-md" alt="listening">
+                        <div class="p-3 text-center">
+                            Implemented semantic HTML, accessible labels, and screen-reader-friendly content to ensure clear audio and visual interpretation
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <img src="images/keyboard.png" class="max-w-[100%] rounded-t-md" alt="Keyboard Navigation">
+                        <div class="p-3 text-center">
+                            Designed WCAG-compliant forms and navigation with readable contrast, error handling, and inclusive interaction patterns
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="py-10 lg:py-16 bg-white" id="workExperience">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Experience
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <div class="flex items-center gap-5 lg:gap-7 lg:gap-10">
+                            <img src="images/pc.svg" class="max-w-[50px] lg:max-w-[70px] mb-3" alt="">
+                            <div>
+                                <h2 class="font-bold text-lg mb-2">UI Developer</h3>
+                                <h3 class="text-md mb-3 font-semibold">Kott software pvt.ltd</h2>
+                                <span class="px-3 py-1 bg-secondary inline-block rounded-lg font-medium mb-3 border border-[#ccc]">
+                                    Product Based Company
+                                </span>
+                                <span class="px-3 py-1 inline-block rounded-lg font-medium bg-[#d2ffdc] mb-3 border border-[#ccc]">
+                                    From 2021
+                                </span>
+                                <div class="flex gap-2">
+                                    <img src="images/subversion.png" class="max-w-[24px]" alt="">
+                                    <span>version control : SVN</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="list-disc ps-5">
+                            <li class="mb-3">
+                                Developed pixel-perfect, responsive websites
+                            </li>
+                            <li>
+                                Developed 15+ pixel-perfect website
+                            </li>
+                        </ul> -->
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                       <div class="flex items-center gap-5 lg:gap-7 lg:gap-10">
+                            <img src="images/pc.svg" class="max-w-[50px] lg:max-w-[70px] mb-3">
+                            <div>
+                                <h2 class="font-bold text-lg mb-2">UI Developer</h3>
+                                <h3 class="text-md mb-3 font-semibold">Spawoz Technologies pvt.ltd</h2>
+                                <span class="px-3 py-1 bg-secondary inline-block rounded-lg font-medium mb-3 border border-[#ccc]">
+                                    Project Based Company
+                                </span>
+                                <span class="px-3 py-1 bg-secondary inline-block rounded-lg font-medium mb-3 border border-[#ccc]">
+                                    From 2018 to 2021
+                                </span>
+                                <div class="flex gap-2">
+                                    <img src="images/git.png" class="max-w-[24px]">
+                                    <span>version control : Git</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="list-disc ps-5">
+                            <li class="mb-3">
+                                Developed pixel-perfect, responsive websites
+                            </li>
+                            <li>
+                                Developed 15+ pixel-perfect website
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Project Overview -->
+        <section class="py-10 lg:py-16" id="projectOverview">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Project Overview
+                </h2>
+                <p class="mb-7 leading-7 text-justify">
+                    An enterprise-grade employee onboarding platform designed to simplify and digitize the hiring process of employees. The application provides a centralized onboarding portal that enables new hires to complete required documentation, orientation, and training through a clean and intuitive user interface.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0]">
+                        <h2 class="font-bold text-lg mb-3">Responsibilities</h3>
+                        <ul class="list-disc ps-5">
+                            <li class="mb-3">
+                                Built the complete UI for the different portal sections
+                            </li>
+                            <li class="mb-3">
+                                Developed HTML-based user interfaces for multiple onboarding forms
+                            </li>
+                            <li class="mb-3">
+                                Designed and implemented administrative and compliance reports using Telerik Reporting
+                            </li>
+                            <li class="mb-3">
+                                Ensured UI consistency, responsiveness, and accessibility across devices
+                            </li>
+                            <li>
+                                Collaborated with UX designers, backend developers, and QA teams to deliver production-ready UI
+                            </li>
+                        </ul>
+                    </div>
+                    
+                   <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0]">
+                        <h2 class="font-bold text-lg mb-3">Technologies Used</h3>
+                        <ul class="list-disc ps-5">
+                            <li class="mb-3">
+                                HTML5
+                            </li>
+                            <li class="mb-3">
+                                CSS3 /  Bootstrap 3,4,5
+                            </li>
+                            <li class="mb-3">
+                                JavaScript
+                            </li>
+                            <li class="mb-3">
+                                Telerik Reporting
+                            </li>
+                            <li class="mb-3">
+                                Accessibility Best Practices
+                            </li>
+                            <li>
+                                Responsive Design
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="py-10 lg:py-16 bg-white" id="myCertifications">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Certifications
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-3 text-center">
+                    <div class="bg-white p-1 rounded-lg shadow border border-[#e2d8c0]">
+                        <a href="https://www.linkedin.com/learning/certificates/5a7e476dac881235f57956d08d8be6ab714fd84f2eb0a58f732d3c1d1c87dac0" target="
+                        _blank">
+                            <img src="images/certificates/ModernProjectwithReact.jpg" class="w-full rounded-md">
+                        </a>
+                    </div>
+                    <div class="bg-white p-1 rounded-lg shadow border border-[#e2d8c0]">
+                        <a href="https://www.linkedin.com/learning/certificates/a805857553455e5fe56016fb850bda428a503816b62ee4c76a2ac5c28fd9a36a" target="
+                        _blank">
+                            <img src="images/certificates/ReactEssentialTraining.jpg" class="w-full rounded-md">
+                        </a>
+                    </div>
+                    <div class="bg-white p-1 rounded-lg shadow border border-[#e2d8c0]">
+                        <a href="https://www.linkedin.com/learning/certificates/16e71ba93f1f383d2965e7f2066591932e8db2522c74cecccf7ebf7b88eb7763" target="
+                        _blank">
+                            <img src="images/certificates/WCAG-Guidelines.jpg" class="w-full rounded-md">
+                        </a>
+                    </div>
+                    <div class="bg-white p-1 rounded-lg shadow border border-[#e2d8c0]">
+                        <a href="https://www.linkedin.com/learning/certificates/9b705a9b5e485605a76824ee414a1706926af9b7c619ce0affeede27237b6b77" target="
+                        _blank">
+                            <img src="images/certificates/Accessibility.jpg" class="w-full rounded-md">
+                        </a>
+                    </div>
+                    <div class="bg-white p-1 rounded-lg shadow border border-[#e2d8c0]">
+                        <a href="https://www.linkedin.com/learning/certificates/7d80d80e22240596b9c7fb23f348ecbdcaeba2c08cf3dac419b73c99dab1d16e" target="
+                        _blank">
+                            <img src="images/certificates/UXDesign.jpg" class="w-full rounded-md">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- Education -->
+        <section class="py-10 lg:py-16" id="qualifications">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 font-[Space Grotesk]">
+                    Education
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                        <div class="flex items-center gap-2 lg:gap-10 relative">
+                            <img src="images/school.png" class="max-w-[50px] lg:max-w-[70px] mb-3 lg:relative absolute top-[-45px] right-[-15px] lg:top-0 lg:right-0" alt="graduation cap">
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">MCA - Master of Computer Applications</h3>
+                                <h2 class="text-md mb-3 font-semibold">Union Christian College Aluva, Kerala, India</h2>
+                                <span class="px-3 py-1 bg-secondary inline-block rounded-lg font-medium">
+                                    2015 - 2018
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow border border-[#e2d8c0] hover:shadow-shadowcolor">
+                       <div class="flex items-center gap-2 lg:gap-10 relative">
+                            <img src="images/school.png" class="max-w-[50px] lg:max-w-[70px] mb-3 lg:relative absolute top-[-45px] right-[-15px] lg:top-0 lg:right-0" alt="graduation cap">
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">BCA - Bachelor of Computer Applications</h3>
+                                <h2 class="text-md mb-3 font-semibold">NSS College Rajakumari, Kerala, India</h2>
+                                <span class="px-3 py-1 bg-secondary inline-block rounded-lg font-medium">
+                                    2012 - 2015
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section class="py-10 lg:py-16 relative bg-[#ebd5cd]" id="contact">
+            <img src="images/bg-img.jpg" class="absolute w-full h-full inset-0 object-cover opacity-[.04]">
+            <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto px-4 relative z-10">
+                <div class="lg:flex gap-12 items-center max-w-[750px] mx-auto p-5">
+                    <img src="images/ui-dev.png" class="hidden lg:block max-w-[200px] rounded-l-lg">
+                    <div>
+                        <a href="mailto:anumappanikkattu@gmail.com" class="flex items-center gap-3 font-semibold mb-4">
+                            <i class="material-icons">mail</i>
+                            <span>anumappanikkattu@gmail.com</span>
+                        </a>
+                        <a href="tel:7356002488" class="flex items-center gap-3 font-semibold mb-4">
+                            <i class="material-icons">phone</i>
+                            <span>7356002488</span>
+                        </a>
+                        <a href="https://wa.me/7356002488" target="_blank" class="flex items-center gap-3 font-semibold mb-4">
+                            <img src="images/whatsapp.png" class="max-w-[23px]">
+                            <span>Whatsapp</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anu-moly-poulose-aa2014140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="flex items-center gap-3 font-semibold">
+                            <img src="images/linkedin.png" class="max-w-[23px]">
+                            <span>Anu Moly Poulose</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary text-white">
+        <div class="xl:max-w-6xl xxl:max-w-7xl mx-auto py-2 text-center">
+            © 2026 Anu Moly Poulose. All rights reserved.
+        </div>
+    </footer>
+    <script type="text/javascript">
+        const btn = document.getElementById("menuBtn");
+        const nav = document.getElementById("navbar");
+
+        // activating the selected link
+        const links =  document.querySelectorAll(".nav_link");
+        function setActiveLink(){
+            const current_hash = window.location.hash || "#home";
+            links.forEach(link => {
+                link.classList.remove("active");
+                if(link.getAttribute("href") === current_hash){
+                    link.classList.add("active");
+                }
+            });
+            nav.classList.toggle("hidden");
+        }
+        setActiveLink(); // for the page load
+        window.addEventListener("hashchange",setActiveLink);
+
+
+        //adding a class to the fixed top header when its dcroll down
+        const top_Header = document.getElementById("topHeader");
+
+        window.addEventListener("scroll", () => {
+            if(window.scrollY > 50){
+                top_Header.classList.add("scrolled");
+            }else{
+                top_Header.classList.remove("scrolled");
+            }
+        })
+
+       
+
+        btn.addEventListener("click", () => {
+          nav.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
