@@ -489,7 +489,7 @@ body:has(header.active) section {
         display: none;
         position: fixed;
         top:0;
-        height: calc(100vh - 51px);
+        height: calc(100vh - 150px);
         left: 0;
         right: 0;
     }
