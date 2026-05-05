@@ -456,10 +456,16 @@ body:has(header.active) section {
  align-items: center;
  justify-content: center;
  text-decoration: none;
+  visibility: hidden;
+  transition: 0.3s ease;
 }
 .scroll_top .material-icons{
     font-size: 35px;
     line-height: 35px;
+}
+.scroll_top.show {
+  opacity: 1;
+  visibility: visible;
 }
 @media only screen and (max-width:1440px){
     .container{

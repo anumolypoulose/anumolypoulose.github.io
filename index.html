@@ -471,6 +471,19 @@
                 behavior: 'smooth'
               });
             });
+
+            const btn = document.querySelector('.scroll_top');
+            window.addEventListener('scroll', () => {
+              const scrollY = window.scrollY;
+              const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+              // Show when scrolled more than 50% of page
+              if (scrollY > pageHeight / 2) {
+                btn.classList.add('show');
+              } else {
+                btn.classList.remove('show');
+              }
+            });
         </script>
     </body>
 </html>
