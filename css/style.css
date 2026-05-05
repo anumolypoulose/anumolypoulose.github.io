@@ -404,18 +404,20 @@ ul.tick li:before{
     margin: 10px 0;
 }
 .open_btn{
-    display: flex;
     align-items: center;
     text-decoration: none;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
     color: #fff;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
     left: 0;
-    right:0;
-    background-color: #3c0b40;
+    top: 0;
+    background-color: #000000;
     display: none;
+    border-radius: 0 0 22px;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    z-index: 3;
 }
 .close_btn {
     color: #fff;
