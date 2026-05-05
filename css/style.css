@@ -212,7 +212,7 @@ header{
     text-align: center; 
     position: relative;
 }
-.banner:after{
+.banner:before{
     background-image: url(../images/bg-img.jpg);
     position: absolute;;
     left: 0;
@@ -403,6 +403,64 @@ ul.tick li:before{
     display: inline-block;
     margin: 10px 0;
 }
+.open_btn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    padding: 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    background-color: #3c0b40;
+    display: none;
+}
+.close_btn {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #a50000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -27px;
+}
+.close_btn .material-icons{
+    font-size: 30px;
+}
+body:has(header.active) {
+  overflow: hidden;
+}
+body:has(header.active) section {
+  filter: blur(5px);
+}
+.scroll_top{
+ width: 50px;
+ height: 50px;
+ border-radius: 100%;
+ background: #0d7c0b;
+ border: 1px solid #13b93d;
+ color: #fff;
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+}
+.scroll_top .material-icons{
+    font-size: 35px;
+    line-height: 35px;
+}
 @media only screen and (max-width:1440px){
     .container{
         max-width: 1100px;
@@ -425,13 +483,17 @@ ul.tick li:before{
         display: none;
         position: fixed;
         top:0;
+        height: calc(100vh - 51px);
         left: 0;
         right: 0;
+    }
+    header.active{
+        display: block;
     }
     ul.nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
+        gap: 10px;
     }
     .md-none{
         display: none;
@@ -445,7 +507,12 @@ ul.tick li:before{
     .col-6{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
+    .open_btn{
+        display: flex;
+    }
+    .close_btn{
+        display: flex;
+    }
 }
 @media only screen and (max-width:480px){
     body{

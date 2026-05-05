@@ -31,37 +31,43 @@
                         <a href="AnuMolyPouloseResume.pdf" class="btn_primary" target="_blank">Download Resume</a>
                     </div>
                 </div>
+                <a class="open_btn" href="javascript:void(0)">
+                    <span class="material-icons">menu</span>
+                </a>
             </section>
-             <header>
-            <div class="container">
-                <ul class="nav d-flex align-items-center gap-30 justify-content-center font-title p-0">
-                    <li>
-                        <a href="#" class="nav-item text-decoration-none">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="nav-item text-decoration-none">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="nav-item text-decoration-none">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#tools" class="nav-item text-decoration-none">Tools</a>
-                    </li>
-                    <li>
-                        <a href="#exp" class="nav-item text-decoration-none">Experience</a>
-                    </li>
-                    <li>
-                        <a href="#wcag" class="nav-item text-decoration-none">WCAG</a>
-                    </li>
-                    <li>
-                        <a href="#certificate" class="nav-item text-decoration-none">Certifications</a>
-                    </li>
-                    <li>
-                        <a href="#edu" class="nav-item text-decoration-none">Education</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+            <header>
+                <div class="container">
+                    <ul class="nav d-flex align-items-center gap-30 justify-content-center font-title p-0">
+                        <li>
+                            <a href="#" class="nav-item text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-item text-decoration-none">About</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="nav-item text-decoration-none">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#tools" class="nav-item text-decoration-none">Tools</a>
+                        </li>
+                        <li>
+                            <a href="#exp" class="nav-item text-decoration-none">Experience</a>
+                        </li>
+                        <li>
+                            <a href="#wcag" class="nav-item text-decoration-none">WCAG</a>
+                        </li>
+                        <li>
+                            <a href="#certificate" class="nav-item text-decoration-none">Certifications</a>
+                        </li>
+                        <li>
+                            <a href="#edu" class="nav-item text-decoration-none">Education</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="close_btn" href="javascript:void(0)">
+                    <span class="material-icons">close</span>
+                </a>
+            </header>
             <section class="intro spacer" id="about">
                 <div class="container">
                     <h2 class="font-title title-primary">
@@ -417,6 +423,11 @@
                     <img src="images/linkedin.png">
                 </a>
             </div>
+            <a href="javascript:void(0)" class="scroll_top">
+                <span class="material-icons">
+                keyboard_double_arrow_up
+                </span>
+            </a>
         </main>
         <footer>
 
@@ -427,6 +438,37 @@
               window.scrollTo({
                 top: 0,
                 behavior: "smooth" 
+              });
+            });
+
+            const openBtn = document.querySelector('.open_btn');
+            const closeBtn = document.querySelector('.close_btn');
+            const header = document.querySelector('header');
+
+           
+            openBtn.addEventListener('click', () => {
+              header.classList.add('active');
+            });
+
+            
+            closeBtn.addEventListener('click', () => {
+              header.classList.remove('active');
+            });
+
+
+            document.querySelectorAll('header .nav li a').forEach(link => {
+              link.addEventListener('click', () => {
+                console.log("test");
+                header.classList.remove('active');
+              });
+            });
+
+            document.querySelector('.scroll_top').addEventListener('click', (e) => {
+              e.preventDefault();
+
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
               });
             });
         </script>
